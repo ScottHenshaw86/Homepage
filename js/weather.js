@@ -156,26 +156,26 @@ function hideElements() {
 }
 //////////////////////////////////////////////////////////////
 
-function search(value) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', "city_list.json");
-    xhr.addEventListener('readystatechange', function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            results = JSON.parse(xhr.responseText);
-            var resultsArray = [];
-            for (let i=0, c=results.length; i<c; i++) {
-                var myRegex = new RegExp("^" + value, "i");
-                    if (resultsArray.length > 9) {
-                        break;
-                    } else if (myRegex.test(results[i].name)) {
-                        resultsArray.push(results[i]);
-                    }
-            }
-            display(resultsArray);
-        }
-    });
-    xhr.send(null);
-}
+// function search(value) {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('GET', "city_list.json");
+//     xhr.addEventListener('readystatechange', function() {
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//             results = JSON.parse(xhr.responseText);
+//             var resultsArray = [];
+//             for (let i=0, c=results.length; i<c; i++) {
+//                 var myRegex = new RegExp("^" + value, "i");
+//                     if (resultsArray.length > 9) {
+//                         break;
+//                     } else if (myRegex.test(results[i].name)) {
+//                         resultsArray.push(results[i]);
+//                     }
+//             }
+//             display(resultsArray);
+//         }
+//     });
+//     xhr.send(null);
+// }
 
 let mainDiv = document.getElementById('results');
 function display(array) {
@@ -202,9 +202,9 @@ input.addEventListener('keyup', function(e) {
         getForecastByCity(input.value);
         input.blur();
         mainDiv.classList.add('hide');
-    } else if (e.keyCode >= 48 && e.keyCode <= 90 || e.keyCode == 8 && input.value != '') {
-        search(input.value);
-    }
+    // } else if (e.keyCode >= 48 && e.keyCode <= 90 || e.keyCode == 8 && input.value != '') {
+    //     search(input.value);
+    // }
 });
 
 function addEvents(element, id) {
