@@ -92,60 +92,41 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function detectSwipe(f) {
-    var detect = {
-        startX: 0,
-        startY: 0,
-        endX: 0,
-        endY: 0,
-        minX: 200,   // min X swipe for horizontal swipe
-        maxX: 200,   // max X difference for vertical swipe
-        minY: 200,   // min Y swipe for vertical swipe
-        maxY: 200    // max Y difference for horizontal swipe
-    },
-        direction = null,
-        element = document.body;
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;                                                        
+var yDown = null;  
 
-    element.addEventListener('touchstart', function (event) {
-        var touch = event.touches[0];
-        detect.startX = touch.screenX;
-        detect.startY = touch.screenY;
-    });
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+}; 
 
-    element.addEventListener('touchmove', function (event) {
-        // event.preventDefault();
-        var touch = event.touches[0];
-        detect.endX = touch.screenX;
-        detect.endY = touch.screenY;
-    });
-
-    element.addEventListener('touchend', function (event) {
-        if (
-            // Horizontal move.
-            (Math.abs(detect.endX - detect.startX) > detect.minX)
-                && (Math.abs(detect.endY - detect.startY) < detect.maxY)
-        ) {
-            direction = (detect.endX > detect.startX) ? 'right' : 'left';
-        } else if (
-            // Vertical move.
-            (Math.abs(detect.endY - detect.startY) > detect.minY)
-                && (Math.abs(detect.endX - detect.startX) < detect.maxX)
-        ) {
-            direction = (detect.endY > detect.startY) ? 'down' : 'up';
-        }
-
-        if ((direction !== null) && (typeof f === 'function')) {
-            f(direction);
-        }
-    });
-}
-
-detectSwipe(myfunction);
-
-function myfunction(direction) {
-    if (direction === 'right') {
-        plusSlides(1)
-    } else if (direction === 'left') {
-        plusSlides(-1)
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
     }
-}
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            plusSlides(-1);
+            console.log('left')
+        } else {
+            plusSlides(1)
+            console.log('right')
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+        /* up swipe */ 
+        } else { 
+        /* down swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
