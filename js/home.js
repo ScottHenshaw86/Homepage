@@ -1,3 +1,4 @@
+const modal = document.getElementById('myModal');
 const btn = document.getElementById("myBtn");
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', function(e) {
