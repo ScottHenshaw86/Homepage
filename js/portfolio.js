@@ -113,10 +113,10 @@ function handleTouchMove(evt) {
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            plusSlides(-1);
+            plusSlides(1);
             console.log('left')
         } else {
-            plusSlides(1)
+            plusSlides(-1)
             console.log('right')
         }                       
     } else {

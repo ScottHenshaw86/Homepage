@@ -472,6 +472,10 @@ video {
         font-size: 55px;
     }
 
+    .slideshow-container {
+        height: 72vh;
+    }
+
     .resume>p {
         font-size: 25px;
     }
@@ -491,7 +495,7 @@ video {
     }
 
     .skillsList {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .skills {
