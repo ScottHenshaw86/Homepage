@@ -203,7 +203,8 @@ input.addEventListener('keyup', function(e) {
         getForecastByCity(input.value);
         input.blur();
         mainDiv.classList.add('hide');
-    // } else if (e.keyCode >= 48 && e.keyCode <= 90 || e.keyCode == 8 && input.value != '') {
+    } 
+    // else if (e.keyCode >= 48 && e.keyCode <= 90 || e.keyCode == 8 && input.value != '') {
     //     search(input.value);
     // }
 });
