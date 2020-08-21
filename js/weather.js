@@ -13,7 +13,8 @@ if (n >= 6 && n < 20) {
 
 function getForecast(cityID) {
     var xhr = new XMLHttpRequest();
-    var search = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?id=' + cityID + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
+    // var search = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?id=' + cityID + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
+    var search = 'http://api.openweathermap.org/data/2.5/forecast?id=' + cityID + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
 
     xhr.open('GET', search);
     xhr.addEventListener('load', function() {
@@ -34,8 +35,8 @@ function getForecast(cityID) {
 
 function getForecastByCity(city) {
     var xhr = new XMLHttpRequest();
-    var search = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
-
+    // var search = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
+    var search = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=9c050d972bd063785104cfa9e295143b';
     xhr.open('GET', search);
     xhr.addEventListener('load', function() {
         hideElements();
