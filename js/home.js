@@ -4,18 +4,28 @@ const intl = document.getElementById('demoInternational');
 const korean = document.getElementById('demoKorean');
 const dragDrop = document.getElementById('demoDragDrop');
 const weather = document.getElementById('demoWeather');
+const tesla = document.getElementById('demoTesla');
 const intlVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
-                    <source src="img/home/internationalSchoolBrochureDemo.webm" type="video/webm">
-                </video>`;
+                        <source src="img/home/internationalSchoolBrochureDemo.webm" type="video/webm">
+                    </video>`;
 const koreanVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
-                    <source src="img/home/rawKoreanGameDemo.webm" type="video/webm">
-                </video>`;
+                        <source src="img/home/rawKoreanGameDemo.webm" type="video/webm">
+                    </video>`;
 const dragDropVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
-                    <source src="img/home/dragDropDemo.webm" type="video/webm">
-                </video>`;
+                        <source src="img/home/dragDropDemo.webm" type="video/webm">
+                    </video>`;
 const weatherVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
-                    <source src="img/home/weatherForecastDemo.webm" type="video/webm">
-                </video>`;
+                        <source src="img/home/weatherForecastDemo.webm" type="video/webm">
+                    </video>`;
+const teslaVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="img/home/teslaDemo.webm" type="video/webm">
+                    </video>`;               
+
+changeImage(intl);
+changeImage(korean);
+changeImage(dragDrop);
+changeImage(weather);
+changeImage(tesla);
 
 let source;
 function changeImage(e) {
@@ -33,8 +43,12 @@ function changeImage(e) {
             case weather:
                 e.innerHTML = weatherVideo;
                 break;
+            case tesla:
+                e.innerHTML = teslaVideo;
+                break;
         }
     });
+    play = false;
 }
 
 // for (let i=0; i<images.length; i++) {
@@ -52,7 +66,6 @@ function changeImage(e) {
 //     })
 // }
 
-const modal = document.getElementById("myModal");
 const btn = document.getElementById("myBtn");
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', function(e) {
@@ -65,15 +78,6 @@ hamburger.addEventListener('click', function(e) {
     }  
 });
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    hamburger.classList.remove('is-active');
-  }
-}
-
-/////////////////////////////////////////////////////////
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -102,9 +106,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-///////////////////////////////////////////////////////
-
-changeImage(intl);
-changeImage(korean);
-changeImage(dragDrop);
-changeImage(weather);
