@@ -1,11 +1,11 @@
 @font-face {
     font-family: tesla;
-    src: url('../fonts/tesla.ttf');
+    src: url('../font/tesla.ttf');
 }
 
 @font-face {
     font-family: gotham;
-    src: url('../fonts/Gotham\ Book\ Regular.otf');
+    src: url('../font/Gotham Book Regular.otf');
 }
 
 html {
