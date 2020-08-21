@@ -97,10 +97,10 @@ function detectSwipe(f) {
         startY: 0,
         endX: 0,
         endY: 0,
-        minX: 60,   // min X swipe for horizontal swipe
-        maxX: 30,   // max X difference for vertical swipe
-        minY: 50,   // min Y swipe for vertial swipe
-        maxY: 60    // max Y difference for horizontal swipe
+        minX: 100,   // min X swipe for horizontal swipe
+        maxX: 100,   // max X difference for vertical swipe
+        minY: 100,   // min Y swipe for vertial swipe
+        maxY: 100    // max Y difference for horizontal swipe
     },
         direction = null,
         element = document.body;
