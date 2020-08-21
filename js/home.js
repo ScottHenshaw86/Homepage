@@ -4,16 +4,16 @@ const intl = document.getElementById('demoInternational');
 const korean = document.getElementById('demoKorean');
 const dragDrop = document.getElementById('demoDragDrop');
 const weather = document.getElementById('demoWeather');
-const intlVideo =   `<video width="500" height="300" autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
+const intlVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
                     <source src="img/home/internationalSchoolBrochureDemo.webm" type="video/webm">
                 </video>`;
-const koreanVideo =   `<video width="500" height="300" autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
+const koreanVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
                     <source src="img/home/rawKoreanGameDemo.webm" type="video/webm">
                 </video>`;
-const dragDropVideo =   `<video width="500" height="300" autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
+const dragDropVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
                     <source src="img/home/dragDropDemo.webm" type="video/webm">
                 </video>`;
-const weatherVideo =   `<video width="500" height="300" autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
+const weatherVideo =   `<video autoplay="autoplay" controls="controls" onclick="this.paused ? this.play() : this.pause();">
                     <source src="img/home/weatherForecastDemo.webm" type="video/webm">
                 </video>`;
 
@@ -72,6 +72,37 @@ window.onclick = function(event) {
     hamburger.classList.remove('is-active');
   }
 }
+
+/////////////////////////////////////////////////////////
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+///////////////////////////////////////////////////////
 
 changeImage(intl);
 changeImage(korean);
