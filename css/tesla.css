@@ -1,11 +1,11 @@
 @font-face {
     font-family: tesla;
-    src: url(fonts/tesla.ttf);
+    src: url('../fonts/tesla.ttf');
 }
 
 @font-face {
     font-family: gotham;
-    src: url(fonts/Gotham\ Book\ Regular.otf);
+    src: url('../fonts/Gotham Book Regular.otf');
 }
 
 html {
@@ -54,7 +54,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('images/Homepage_Desktop_Bluesky.jpg') no-repeat;
+    background: url('../img/tesla/Homepage_Desktop_Bluesky.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -343,7 +343,7 @@ footer {
 
 #page2 {
     position: relative;
-    background: url('images/homepage_energy_hero_desktop.jpg') no-repeat;
+    background: url('../img/tesla/homepage_energy_hero_desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -364,7 +364,7 @@ footer {
 
 #page3 {
     position: relative;
-    background: url('images/accessories_desktop_poster.jpg') no-repeat;
+    background: url('../img/tesla/accessories_desktop_poster.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
