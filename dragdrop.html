@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Drag & Drop Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="css/dragdrop.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/site.webmanifest">
+    </head>
+    <body>
+        <div id="border" class="border">
+            <div class="draggableBox box1 cloud1" draggable="false" ondragstart="return false;">
+                <img src="img/dragdrop/cloud1.png" draggable="false" ondragstart="return false;">
+            </div>
+            <div class="draggableBox box2 cloud2" draggable="false" ondragstart="return false;">
+                <img src="img/dragdrop/cloud2.png" draggable="false" ondragstart="return false;">
+            </div>
+            <div class="draggableBox box3 cloud3" draggable="false" ondragstart="return false;">
+                <img src="img/dragdrop/cloud3.png" draggable="false" ondragstart="return false;">
+            </div>
+            <div id="target1" class="target"></div>
+            <div id="score" class="score">Score: </div>
+            <div id="bestScore" class="score">Best: </div>
+            <div id="gameInfo">Hide the dark cloud! Make sure to choose the right shape.</div>
+            <a id="marioButton" href="/mario" draggable="false" ondragstart="return false;"><img id="marioImage" src="https://www.mariowiki.com/images/archive/d/d8/20200402205710%21Super_Mario_SMB3.png" draggable="false"></a>
+        </div>
+        <script src="js/dragdrop.js"></script>
+    </body>
+</html>

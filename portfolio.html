@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="name">
+            Scott Henshaw
+        </div>
+        <button id="myBtn" class="hamburger hamburger--elastic" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="nav">
+            <div class="navElements">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="scotthenshaw.pdf">Resume</a>
+                <!-- <a href="" target="_blank"><img id="linkedin" src="img/home/linkedin.webp"></a> -->
+                <a id="githubLink" href="https://github.com/ScottHenshaw86" target="_blank"><img id="github" src="img/home/GitHub-Mark-Light-32px.png"></a>
+            </div>
+        </div>
+    </header>
+    <div class="main portfolio">
+        <p class="seePreview">Click an image to see a demonstration</p>
+        <div class="top">
+            <div class="demo">
+                <div id="demoInternational" class="demoContent">
+                    <img class="demoImage" src="img/home/internationalSchoolBrochureDemo.jpg" alt="">
+                </div>
+                <div class="skills">
+                    <ul class="skillsList">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <a href="https://github.com/ScottHenshaw86/StPaul" target="_blank">
+                            <img class="github" src="img/home/GitHub-Mark-Light-32px.png">
+                            github
+                        </a>
+                        <a href="stpaul" target="_blank">Live Version!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="demo">
+                <div id="demoKorean" class="demoContent">
+                    <img class="demoImage" src="img/home/rawKoreanGameDemo.jpg" alt="">
+                </div>
+                <div class="skills">
+                    <div class="skills">
+                        <ul class="skillsList">
+                            <li>ReactJS</li>
+                            <li>PHP</li>
+                        </ul>
+                        <div class="spacer"></div>
+                        <ul class="skillsList">
+                            <li>MySQL</li>
+                            <li>Axios</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <a href="https://github.com/ScottHenshaw86/Korean" target="_blank">
+                            <img class="github" src="img/home/GitHub-Mark-Light-32px.png">
+                            github
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="demo">
+                <div id="demoDragDrop" class="demoContent">
+                    <img class="demoImage" src="img/home/dragDropDemo.jpg" alt="">
+                </div>
+                <div class="skills">
+                    <ul class="skillsList">
+                        <li>Javascript</li>
+                        <li>HTML</li>
+                    </ul>
+                    <div class="spacer"></div>
+                    <ul class="skillsList">
+                        <li>CSS</li>
+                        <li class="hidden">&nbsp;</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <a href="https://github.com/ScottHenshaw86/DragDrop" target="_blank">
+                            <img class="github" src="img/home/GitHub-Mark-Light-32px.png">
+                            github
+                        </a>
+                        <a href="dragdrop" target="_blank">Live Version!</a>
+                    </div> 
+                </div>
+                
+            </div>
+            <div class="demo">
+                <div id="demoWeather" class="demoContent">
+                    <img class="demoImage" src="img/home/weatherForecastDemo.jpg" alt="">
+                </div>
+                <div class="skills">
+                    <ul class="skillsList">
+                        <li>Javascript</li>
+                        <li>AJAX</li>
+                    </ul>
+                    <div class="spacer"></div>
+                    <ul class="skillsList">
+                        <li>OpenWeather API</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <a href="https://github.com/ScottHenshaw86/Weather" target="_blank">
+                            <img class="github" src="img/home/GitHub-Mark-Light-32px.png">
+                            github
+                        </a>
+                        <a href="weather" target="_blank">Live Version!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modalMenu">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <ul class="modalLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="scotthenshaw.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,8 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
-        <p>My name is Scott!</p>
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <title>Scott Henshaw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+</head>
+<body>
+    <div class="home">
+        <!-- <?php include 'header.php';?> -->
+        <header>
+            <div class="name">
+                Scott Henshaw
+            </div>
+            <button id="myBtn" class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="nav">
+                <div class="navElements">
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="scotthenshaw.pdf">Resume</a>
+                    <!-- <a href="" target="_blank"><img id="linkedin" src="img/home/linkedin.webp"></a> -->
+                    <a id="githubLink" href="https://github.com/ScottHenshaw86" target="_blank"><img id="github" src="img/home/GitHub-Mark-Light-32px.png"></a>
+                </div>
+            </div>
+        </header>
+        <div class="mainContent">
+            <div class="rotating-border">
+                <div class="star one"></div>
+                <div class="star two"></div>
+                <div class="star three"></div>
+                <div class="star four"></div>
+                <div class="about">
+                    <p>Hi, I'm Scott.</p>
+                    <p>I'm a fullstack software developer based in Seoul.</p>   
+                    <div class="resume">
+                        <p>Check out my&nbsp;<a href="scotthenshaw.pdf" target="_blank"><span class="linkSpan"> resume</span></a></p>
+                        <p>Or see my&nbsp;<a href="portfolio.html"><span class="linkSpan"> projects</span></a></p>
+                        <!-- <p>Or&nbsp;<a href="contact"><span>contact</span></a> me!</p> -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- The Modal -->
+    <div id="myModal" class="modalMenu">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <ul class="modalLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="scotthenshaw.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
 </html>
