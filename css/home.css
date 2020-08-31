@@ -295,7 +295,7 @@ video {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 96%;
   height: 77vh;
   position: relative;
   margin: auto;
