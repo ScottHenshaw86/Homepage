@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 </head>
 <body>
-    <input type="file" accept="image/*" capture="camera" />
+    <input type="button" id="loadFileXml" value="loadXml" onclick="document.getElementById('file').click();" />
+    <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"/>
 </body>
 </html>
