@@ -8,9 +8,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <style>
+        #topView {
+            width: 200px;
+            height: 100px;
+            color: pink;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
-    <input type="button" id="loadFileXml" value="loadXml" onclick="document.getElementById('file').click();" />
+    <input type="button" id="topView" value="Top of foot picture" onclick="document.getElementById('file').click();" />
     <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"/>
 </body>
 </html>
