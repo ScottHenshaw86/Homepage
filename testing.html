@@ -12,7 +12,7 @@
         #topView {
             width: 200px;
             height: 100px;
-            color: pink;
+            background-color: pink;
             border-radius: 20px;
         }
     </style>
@@ -20,5 +20,15 @@
 <body>
     <input type="button" id="topView" value="Top of foot picture" onclick="document.getElementById('file').click();" />
     <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"/>
+    <img id="output"/>
+    <script>
+    var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+    </script>
 </body>
 </html>
