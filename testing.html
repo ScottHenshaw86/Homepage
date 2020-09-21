@@ -19,7 +19,7 @@
 </head>
 <body>
     <input type="button" id="topView" value="Top of foot picture" onclick="document.getElementById('file').click();" />
-    <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"/>
+    <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"  onchange="loadFile(event)"/>
     <img id="output"/>
     <script>
     var loadFile = function(event) {
