@@ -46,8 +46,8 @@ body {
     user-select: none;
     border: 2px solid black;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 35px;
+    height: 35px;
     z-index: 10;
     transform: translate(-50%, -50%);
 }
