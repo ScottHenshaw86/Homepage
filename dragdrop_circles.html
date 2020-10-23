@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Drag & Drop Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="css/dragdrop_circles.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    </head>
+    <body>
+        <div class="outside-border" draggable="false">
+            <div id="border" class="border" draggable="false">
+                <div class="draggableBorder"></div>
+                <div class="draggableBox box1" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBox box2" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBox box3" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBox box4" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBoxLine line12" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBoxLine line23" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBoxLine line34" draggable="false" ondragstart="return false;"></div>
+                <div class="draggableBoxLine line41" draggable="false" ondragstart="return false;"></div>
+                <div class="targetBox">
+            </div>
+            <button id="getCornersButton" type="button">Get Corner Values</button>
+        </div>
+        
+        
+        <script src="js/dragdrop_circles.js"></script>
+    </body>
+</html>

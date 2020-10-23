@@ -17,7 +17,7 @@
         }
         
         #output {
-            width: 50%;
+            width: 65%;
         }
     </style>
 </head>
@@ -25,6 +25,8 @@
     <input type="button" id="topView" value="Top of foot picture" onclick="document.getElementById('file').click();" />
     <input type="file" accept="image/*" capture="camera"  style="display:none;" id="file" name="file"  onchange="loadFile(event)"/>
     <img id="output"/>
+    <button></button>
+    <!-- ******************************** -->
     <script>
     var loadFile = function(event) {
         var output = document.getElementById('output');
@@ -33,6 +35,12 @@
         URL.revokeObjectURL(output.src) // free memory
         }
     };
+
+    var randomSize = function() {
+        var shoeSize = document.getElementById('shoeSize');
+        shoeSize.innerHTML = Math.floor(Math.random() * (12 - 6 + 1) ) + 6;
+    };
     </script>
+    <!-- ******************************** -->
 </body>
 </html>
