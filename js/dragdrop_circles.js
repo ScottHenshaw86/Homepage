@@ -43,25 +43,11 @@
         let box3Left = box3.offsetLeft;
         let box4Top = box4.offsetTop;
         let box4Left = box4.offsetLeft;
-        let box1TopPlus = box1.offsetTop+1;
-        let box1LeftPlus = box1.offsetLeft+1;
-        let box2TopPlus = box2.offsetTop+1;
-        let box2LeftMinus = box2.offsetLeft-1;
-        let box3TopMinus = box3.offsetTop-1;
-        let box3LeftMinus = box3.offsetLeft-1;
-        let box4TopMinus = box4.offsetTop-1;
-        let box4LeftPlus = box4.offsetLeft+1;
         let newPolygon =  "polygon( " 
                 + box1Left + "px " + box1Top + "px, "
-                + box4Left + "px " + box4Top + "px, " 
-                + box4LeftPlus + "px " + box4TopMinus + "px, " 
-                + box1LeftPlus + "px " + box1TopPlus + "px, " 
-                + box2LeftMinus + "px " + box2TopPlus + "px, " 
-                + box3LeftMinus + "px " + box3TopMinus + "px, " 
-                + box4LeftPlus + "px " + box4TopMinus + "px, " 
-                + box4Left + "px " + box4Top + "px, " 
+                + box2Left + "px " + box2Top + "px, " 
                 + box3Left + "px " + box3Top + "px, " 
-                + box2Left + "px " + box2Top + "px)";
+                + box4Left + "px " + box4Top + "px)";
         // console.log('newPolygon: ', newPolygon);
         return newPolygon;
     }
